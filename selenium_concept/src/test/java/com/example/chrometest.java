@@ -44,7 +44,7 @@ public class chrometest extends browser {
 
         wait.until(ExpectedConditions.visibilityOf(element.loginbtn()));
         element.loginbtn().click();
-
+        System.out.println(driver.getCurrentUrl());
         if (pro.getProperty("dashboard_url") == driver.getCurrentUrl()){
             soft.fail("Application logged in without credentials");
         }
