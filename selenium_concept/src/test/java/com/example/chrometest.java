@@ -4,16 +4,20 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
 import java.io.IOException;
 import java.time.Duration;
 
 
 public class chrometest extends browser {
 
+    WebDriver driver = this.drive();
     xpath element;
     SoftAssert soft = new SoftAssert();
     WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(15));

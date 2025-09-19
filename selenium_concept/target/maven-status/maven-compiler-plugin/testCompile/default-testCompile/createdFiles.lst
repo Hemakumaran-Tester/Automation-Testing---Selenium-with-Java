@@ -1,2 +1,5 @@
+com\example\change_password.class
 com\example\chrometest.class
+TestRunner\TestRunner.class
+com\example\xpath.class
 com\example\browser.class

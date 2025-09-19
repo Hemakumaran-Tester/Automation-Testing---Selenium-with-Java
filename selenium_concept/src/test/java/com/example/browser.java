@@ -1,13 +1,11 @@
 package com.example;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.Properties;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.testng.annotations.BeforeTest;
 
 public class browser {
     WebDriver driver;
@@ -16,8 +14,8 @@ public class browser {
 
     public Properties browser() throws IOException {
         pro = new Properties();
-        String name = System.getProperty("user.dir") + "\\data.properties";
-        FileInputStream file = new FileInputStream(name);
+        String path = System.getProperty("user.dir") + "\\data.properties";
+        FileInputStream file = new FileInputStream(path);
         pro.load(file);
         return pro;
     }
